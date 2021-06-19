@@ -8,12 +8,14 @@ import Notifications from './Video_app_components/Notifications';
 const useStyles = makeStyles((theme) => ({
     appBar: {
         borderRadius: 2,
-        margin: '20px 10px',
+        fontSize: "2rem",
+        margin: '0px 20px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100vh',
+        width: '200vh',
+        height: '5rem',
         border: '5px solid #3f51b5',
 
         [theme.breakpoints.down('xs')]: {
@@ -24,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         width: '100%',
     },
 }));
@@ -33,7 +36,7 @@ function VideoApp() {
     return (
         <div className={classes.wrapper}>
             <AppBar className={classes.appBar} position="static" color="primary" >
-                <Typography variant="h4" align="center"> Video Chat Page! </Typography>
+                <Typography variant="h4" align="center"> Meet </Typography>
             </AppBar>
             <VideoPlayer />
             <Options>
