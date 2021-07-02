@@ -17,20 +17,21 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     container: {
-        width: '600px',
-        margin: '35px 0',
+        width: '500px',
+        margin: '10px 0',
         padding: 0,
         [theme.breakpoints.down('xs')]: {
             width: '80%',
         },
     },
     margin: {
-        marginTop: 20,
+        marginTop: 10,
     },
     padding: {
-        padding: 20,
+        padding: 2,
     },
     paper: {
+        background: '#fff',
         padding: '10px 20px',
     },
 }));
@@ -39,6 +40,10 @@ const Options = ({ children }) => {
     const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
     const [idToCall, setIdToCall] = useState('');
     const classes = useStyles();
+
+    const onClickIdToCall = (e) => {
+        setIdToCall(e.target.value);
+    }
 
     return (
         <Container className={classes.container}>
@@ -55,14 +60,13 @@ const Options = ({ children }) => {
                                 <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
                                     Copy your ID
                                 </Button>
-
                             </CopyToClipboard>
                         </Grid>
                         <Grid item xs={12} md={6} className={classes.padding}>
                             <Typography gutterBottom variant="h8">
                                 Make-a-Call
                             </Typography>
-                            <TextField label="ID to Call" value={name} onChange={(e) => setIdToCall(e.target.value)} fullWidth />
+                            <TextField label="ID to Call" value={idToCall} onChange={onClickIdToCall} fullWidth />
                             {callAccepted && !callEnded ? (
                                 <Button
                                     variant="contained"

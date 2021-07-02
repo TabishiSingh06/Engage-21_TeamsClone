@@ -1,33 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
 
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    padding-bottom: 20px;
-    box-sizing: border-box;    
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v430batch3-adj-58_2.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e1bb0865d56f86b8aa23a94d166553c8);
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(2em);
+  backdrop-filter: blur(2em);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 .logo {
-    display: flex;
-    align-items: center;
-    width: 350px;
+  display: flex;
+  align-items: center;
+  width: 450px;
 }
 .header img {
-    padding-left: 60px;
-    padding-right: 20px;
-    height: 55px;
-    width: auto;
+  padding-left: 60px;
+  padding-right: 20px;
+  height: 55px;
+  width: auto;
 }
 .logo-text {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #686868;
-    font-size: 1.4rem;
-    font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #686868;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
-.signup {    
-    padding-right: 100px;
-    align-self: center;
+.signup {
+  padding-right: 100px;
+  align-self: center;
 }

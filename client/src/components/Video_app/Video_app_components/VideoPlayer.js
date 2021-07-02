@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { Grid, Typography, Paper } from '@material-ui/core';
+import { Grid, Typography, Paper, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SocketContext } from '../../../SocketContext';
 
 const useStyles = makeStyles((theme) => ({
     video: {
-        width: '600px',
+        width: '480px',
         [theme.breakpoints.down('xs')]: {
             width: '300px',
         },
@@ -26,6 +26,7 @@ function VideoPlayer() {
     const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
     const classes = useStyles();
 
+
     return (
         <Grid container className={classes.gridContainer}>
             {/*My Own Video*/}
@@ -36,6 +37,8 @@ function VideoPlayer() {
                         <video playsInline muted ref={myVideo} autoPlay className={classes.video} />
                     </Grid>
                 </Paper>
+
+
             )}
             {/*User Video*/}
             {

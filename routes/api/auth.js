@@ -21,7 +21,7 @@ router.get('/', auth, async (req, res) => {
     }
 });
 
-//@route     POST api/aurh
+//@route     POST api/auth
 //@access    public
 //@desc      Authenticate user and Get Token
 router.post(
@@ -71,7 +71,7 @@ router.post(
         //JWT signature
         jwt.sign(payload, process.env.JWT_SECRET_TOKEN,
             {
-                expiresIn: 360000
+                expiresIn: '30d',
             },
             (err, token) => {
                 if (err) throw err;

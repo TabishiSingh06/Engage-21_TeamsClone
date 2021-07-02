@@ -4,14 +4,17 @@ import { Button } from '@material-ui/core';
 
 
 const Notifications = () => {
-    const { answerCall, call, callAccepted } = useContext(SocketContext);
+    const { answerCall, call, callAccepted, declineCall } = useContext(SocketContext);
     return (
         <div>
             {call.isReceivingCall && !callAccepted && (
                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                    <h1>{call.name} is calling:</h1>
+                    <h6>{call.name} is calling:</h6>
                     <Button variant="contained" color="primary" onClick={answerCall}>
                         Answer
+                    </Button>
+                    <Button variant="contained" color="primary" onClick={declineCall}>
+                        Decline
                     </Button>
                 </div>
             )}

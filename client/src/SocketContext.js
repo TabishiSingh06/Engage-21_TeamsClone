@@ -3,7 +3,6 @@ import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
 
 const SocketContext = createContext();
-
 const socket = io('http://localhost:5000');
 
 const ContextProvider = ({ children }) => {
@@ -13,26 +12,25 @@ const ContextProvider = ({ children }) => {
     const [name, setName] = useState('');
     const [call, setCall] = useState({});
     const [me, setMe] = useState('');
+    const [mic, setMic] = useState('');
+
+    //reference out video
     const myVideo = useRef();
+    //reference to other user video
     const userVideo = useRef(null);
+    //reference to help us disconnect from the video call
     const connectionRef = useRef();
 
 
     useEffect(() => {
-        // navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-        //     .then((currentStream) => {
-        //         setStream(currentStream);
-
-        //         myVideo.current.srcObject = currentStream;
-        //         console.log(myVideo);
-
-        //     });
         const userMedia = async () => {
             try {
+                //allow for video stream or not
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                const mic = stream.getAudioTracks()[0].enabled;
+                console.log(mic);
                 console.log(stream);
                 setStream(stream);
-
                 myVideo.current.srcObject = stream;
             } catch (error) {
                 console.log(error);
@@ -48,7 +46,7 @@ const ContextProvider = ({ children }) => {
 
     const answerCall = () => {
         setCallAccepted(true);
-
+        //create a new peer for call accepted
         const peer = new Peer({ initiator: false, trickle: false, stream });
 
         peer.on('signal', (data) => {
@@ -64,9 +62,14 @@ const ContextProvider = ({ children }) => {
         connectionRef.current = peer;
     };
 
-    const callUser = (id) => {
-        const peer = new Peer({ initiator: true, trickle: false, stream });
+    const declineCall = () => {
+        setCallAccepted(false);
+    };
 
+
+    const callUser = (id) => {
+        //create a new peer 
+        const peer = new Peer({ initiator: true, trickle: false, stream });
         peer.on('signal', (data) => {
             socket.emit('callUser', { userToCall: id, signalData: data, from: me, name });
         });
@@ -106,6 +109,8 @@ const ContextProvider = ({ children }) => {
             callUser,
             leaveCall,
             answerCall,
+            mic,
+            declineCall
         }}
         >
             {children}
