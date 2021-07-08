@@ -1,6 +1,7 @@
 import React, { createContext, useState, useRef, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
+import queryString from 'query-string';
 
 const SocketContext = createContext();
 const socket = io('http://localhost:5000');
@@ -21,13 +22,11 @@ const ContextProvider = ({ children }) => {
     //reference to help us disconnect from the video call
     const connectionRef = useRef();
 
-
     useEffect(() => {
         const userMedia = async () => {
             try {
                 //allow for video stream or not
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-                const mic = stream.getAudioTracks()[0].enabled;
                 console.log(mic);
                 console.log(stream);
                 setStream(stream);
@@ -38,7 +37,6 @@ const ContextProvider = ({ children }) => {
         }
         userMedia();
         socket.on('me', (id) => setMe(id));
-
         socket.on('callUser', ({ from, name: callerName, signal }) => {
             setCall({ isReceivingCall: true, from, name: callerName, signal });
         });
@@ -58,14 +56,14 @@ const ContextProvider = ({ children }) => {
         });
 
         peer.signal(call.signal);
-
         connectionRef.current = peer;
     };
 
     const declineCall = () => {
         setCallAccepted(false);
+        connectionRef.current.destroy();
+        window.location.reload();
     };
-
 
     const callUser = (id) => {
         //create a new peer 
@@ -83,15 +81,12 @@ const ContextProvider = ({ children }) => {
 
             peer.signal(signal);
         });
-
         connectionRef.current = peer;
     };
 
     const leaveCall = () => {
         setCallEnded(true);
-
         connectionRef.current.destroy();
-
         window.location.reload();
     };
 
@@ -110,7 +105,7 @@ const ContextProvider = ({ children }) => {
             leaveCall,
             answerCall,
             mic,
-            declineCall
+            declineCall,
         }}
         >
             {children}

@@ -1,5 +1,3 @@
-import { Functions } from '@material-ui/icons';
-import { v4 as uuidv4 } from 'uuid';
 import { SET_ALERT, REMOVE_ALERT } from '../actions/types';
 
 const initialState = [];

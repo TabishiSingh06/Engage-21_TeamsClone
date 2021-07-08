@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import './header.css';
 import teamsLogo from '../../images/microsoft-teams-1.png';
 import Button from '@material-ui/core/Button';
-import { Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import Avatar from '@material-ui/core/Avatar';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../../actions/auth';
+import { logout, logoutAuth } from '../../actions/auth';
 
-const Header = ({isAuthenticated}) => {
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
-    console.log(user);
 
+const Header = ({ logout }) => {
+    let token = localStorage.getItem('token');
+    let profile = localStorage.getItem('profile');
+    console.log(token)
+    console.log(profile)
     return (
         <div className="header" >
             <div className="logo" >
                 <img link="" src={teamsLogo} alt="teams_logo" />
                 <span className="logo-text"> Microsoft <span style={{ color: 'black', fontWeight: '500' }}> Teams Clone </span> </span>
             </div>
-            {/* if(isAuthenticated) */}
-            <Button component={Link} to="/login" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', paddingTop: '0', paddingBottom: '0'}} size="large" variant="contained" color="secondary">
-                Login
-            </Button>
-        </div>
+
+            {token === '' && profile === '' ?
+                <Button component={Link} to="/login" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="secondary">
+                    Login
+                </Button>
+                :
+                <Button onClick={logout} component={Link} to="/" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="secondary">
+                    Logout
+                </Button>
+            }
+
+
+        </div >
     )
 };
 

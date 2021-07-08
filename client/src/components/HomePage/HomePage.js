@@ -17,7 +17,7 @@ const HomePage = () => {
                 <div className="leftBody"> <h2> Teams Clone </h2>
                     <p>Get in touch with </p>
                     <p>your friends and family!</p>
-                    <a href="http://google.com">This is Google</a>
+                    <a href="http://google.com">This is the video link for the project</a>
                 </div>
                 <div className="rightBody">
                     <img src={body_vector} alt="video_call_people" />

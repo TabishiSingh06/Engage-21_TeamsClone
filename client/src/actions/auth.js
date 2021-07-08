@@ -10,12 +10,13 @@ import {
     LOGIN_SUCCESS,
     LOGOUT,
     AUTH,
+    AUTHLOGOUT,
 } from './types';
 import setAuthToken from '../utils/setAuthToken';
 
 //load User
 export const loadUser = () => async dispatch => {
-    if(localStorage.token) {
+    if (localStorage.token) {
         setAuthToken(localStorage.token);
     }
 
@@ -34,17 +35,17 @@ export const loadUser = () => async dispatch => {
 
 
 //Register User
-export const register = ({ name, email, password}) => async dispatch => {
+export const register = ({ name, email, password }) => async dispatch => {
     const config = {
         headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type': 'application/json'
         }
     }
-    const body =  JSON.stringify({ name, email, password });
- 
+    const body = JSON.stringify({ name, email, password });
+
     try {
         const res = await axios.post('api/users', body, config);
-        
+
         dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data,
@@ -54,7 +55,7 @@ export const register = ({ name, email, password}) => async dispatch => {
     } catch (error) {
         const errors = error.response.data.errors;
 
-        if(errors) {
+        if (errors) {
             errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
         }
         dispatch({
@@ -64,17 +65,17 @@ export const register = ({ name, email, password}) => async dispatch => {
 };
 
 //Login User
-export const login = ({ email, password}) => async dispatch => {
+export const login = ({ email, password }) => async dispatch => {
     const config = {
         headers: {
-            'Content-Type' : 'application/json'
+            'Content-Type': 'application/json'
         }
     }
-    const body =  JSON.stringify({ email, password });
- 
+    const body = JSON.stringify({ email, password });
+
     try {
         const res = await axios.post('api/auth', body, config);
-        
+        console.log(res.data)
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -84,7 +85,7 @@ export const login = ({ email, password}) => async dispatch => {
     } catch (error) {
         const errors = error.response.data.errors;
 
-        if(errors) {
+        if (errors) {
             errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
         }
         dispatch({
@@ -93,7 +94,16 @@ export const login = ({ email, password}) => async dispatch => {
     }
 };
 
-//logout a user and clear profile data
-export const logout = () => dispatch => {
-    dispatch({ type: LOGOUT});
+//logout a user 
+export const logout = () => async (dispatch) => {
+
+    localStorage.setItem('token', '');
+    localStorage.setItem('profile', '');
+    dispatch({ type: LOGOUT });
 }
+
+// export const logoutAuth = () => async (dispatch) => {
+//     localStorage.setItem('profile', '');
+//     dispatch({ type: AUTHLOGOUT });
+// }
+

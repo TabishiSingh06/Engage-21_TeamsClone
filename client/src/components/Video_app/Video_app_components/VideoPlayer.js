@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { Grid, Typography, Paper, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SocketContext } from '../../../SocketContext';
+import { Translate } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     video: {
-        width: '480px',
+        width: '450px',
         [theme.breakpoints.down('xs')]: {
             width: '300px',
         },
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: '10px',
-        margin: '10px',
+        margin: '0px',
     },
 }));
 
@@ -32,7 +33,7 @@ function VideoPlayer() {
             {/*My Own Video*/}
             {stream && (
                 <Paper elevation={5} className={classes.paper}>
-                    <Typography variant="h8" >{name || 'Name'}</Typography>
+                    <Typography gutterBottom variant="h8" >{name || 'Name'}</Typography>
                     <Grid item xs={12} md={6}>
                         <video playsInline muted ref={myVideo} autoPlay className={classes.video} />
                     </Grid>

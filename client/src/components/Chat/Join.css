@@ -1,0 +1,67 @@
+.body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.joinOuterContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: black;
+}
+
+.joinInnerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.joinInput {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.heading {
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  border-bottom: 1px solid white;
+}
+
+.button {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #3f51b5;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  border: none;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .joinOuterContainer {
+    height: 100%;
+  }
+  .joinInnerContainer {
+    width: 90%;
+  }
+}
+
+button:focus {
+  outline: 0;
+}

@@ -3,8 +3,8 @@ import { GoogleLogin } from 'react-google-login';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { setAlert } from '../../../actions/alert';
-import { register, login } from '../../../actions/auth';
+import { setAlert } from '../../actions/alert';
+import { register, login } from '../../actions/auth';
 import PropTypes from 'prop-types';
 import LockIcon from '@material-ui/icons/Lock';
 import PersonIcon from '@material-ui/icons/Person';
@@ -12,9 +12,12 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Button from '@material-ui/core/button';
 import Icon from './icon';
 import './FormLogin.css';
-import left from '../../../images/left.png';
-import right from '../../../images/right.png';
-// import { Dispatch } from 'react';
+import left from '../../images/left.png';
+import right from '../../images/right.png';
+import {
+    AUTH,
+} from '../../actions/types';
+
 const iconStyle = {
     height: "1.5rem",
     width: "1.5rem",
@@ -85,14 +88,14 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
         } catch (error) {
             console.log(error);
         }
-
     };
+
     if (isAuthenticated) {
         return <Redirect to="/videoapp" />
     }
 
     const googleFailure = (error) => {
-        console.log(error);
+        console.log(error)
         console.log("Google Sign In was unsuccesful. Try Again.")
     };
 
@@ -181,7 +184,7 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
                                     disabled={renderProps.disabled}
                                     startIcon={<Icon />}
                                     variant='contained'>
-                                    LogIn with Google
+                                    SignUp with Google
                                 </Button>
                             )}
                             onSuccess={googleSuccess}

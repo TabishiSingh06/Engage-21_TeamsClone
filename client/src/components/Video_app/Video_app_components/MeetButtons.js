@@ -23,6 +23,7 @@ const MeetButtons = () => {
             <IconButton onClick={muteMic} height="2rem" aria-label="delete" color="primary">
                 <MicIcon />
             </IconButton>
+
             <IconButton onClick={muteCam} height="2rem" aria-label="delete" color="primary">
                 <VideocamIcon />
             </IconButton>

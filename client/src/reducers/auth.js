@@ -6,12 +6,13 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
-    AUTH
-    // ACCOUNT_DELETED
+    AUTH,
+    AUTHLOGOUT,
 } from '../actions/types';
 
 const initialState = {
     token: localStorage.getItem('token'),
+    authData: null,
     isAuthenticated: null,
     loading: true,
     user: null
@@ -23,9 +24,11 @@ export default function (state = initialState, action) {
         case AUTH:
             localStorage.setItem('profile', JSON.stringify({ ...action?.data }));
             return {
-                ...state, 
+                ...state,
                 authData: action?.data,
                 isAuthenticated: true,
+                loading: false,
+                user: payload
             };
         case USER_LOADED:
             return {
@@ -47,13 +50,14 @@ export default function (state = initialState, action) {
         case AUTH_ERROR:
         case LOGIN_FAIL:
         case LOGOUT:
-            localStorage.removeItem('token');
-            return {
-                ...state,
-                token: null,
-                isAuthenticated: false,
-                loading: false
-            }
+        case AUTHLOGOUT:
+            // localStorage.removeItem(token);
+            return {}
+        // ...state,
+        // token: null,
+        // isAuthenticated: false,
+        // loading: false
+        //}
         default:
             return state;
 
