@@ -15,10 +15,10 @@ This project is a part of the 'Build Phase' of the flagship Microsoft Engage Men
     <img src="./client/src/images/microsoft-teams-1.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Read below for the complete documentation!</h3>
 
   <p align="center">
-    Read below for the complete documentation!
+<!--     Read below for the complete documentation! -->
     <br />
 <!--     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -40,7 +40,9 @@ This project is a part of the 'Build Phase' of the flagship Microsoft Engage Men
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#front-end">Front-end</a></li>
+        <li><a href="#back-end">Back-end</a></li>
+
       </ul>
     </li>   
  
