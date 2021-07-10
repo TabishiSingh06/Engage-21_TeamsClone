@@ -13,12 +13,13 @@ const useStyles = makeStyles((theme) => ({
     },
     gridContainer: {
         width: '100%',
+        alignItems: 'center',
         [theme.breakpoints.down('xs')]: {
             flexDirection: 'column',
         },
     },
     container: {
-        width: '500px',
+        width: '470px',
         margin: '10px 0',
         padding: 0,
         [theme.breakpoints.down('xs')]: {
@@ -33,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         background: '#fff',
-        borderRadius: '20px',
-        padding: '10px 20px',
+        borderRadius: '5px',
+        padding: '10px 10px',
     },
 }));
 
@@ -49,62 +50,60 @@ const Options = ({ children }) => {
 
     return (
         <Container className={classes.container}>
-            <Paper elevation={10} className={classes.paper}>
+            <Paper elevation={2} className={classes.paper}>
                 <form className={classes.root} noValidate autoComplete="off" >
-                    <Grid container className={classes.gridContainer}>
-                        <Grid item xs={12} md={6} className={classes.padding}>
-                            <Typography variant="h8">
-                                Meet Info
-                            </Typography>
-                            <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
-                            <CopyToClipboard text={me}>
-
-                                <Button styles={{ borderRadius: '20px' }} variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
-                                    Copy your ID
-                                </Button>
-
-
-                            </CopyToClipboard>
-                        </Grid>
-                        <Grid item xs={12} md={6} className={classes.padding}>
-                            <Typography variant="h8">
-                                Make-a-Call
-                            </Typography>
-                            <TextField label="ID to Call" value={idToCall} onChange={onClickIdToCall} fullWidth />
-                            {callAccepted && !callEnded ? (
-                                <Link >
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                        startIcon={<PhoneDisabled fontSize="large" />}
-                                        fullWidth
-                                        onClick={leaveCall}
-                                    // className={classes.margin}
-                                    >
-                                        Hang Up
+                    <div className="joinOuterContainer">
+                        <div>
+                            <h6 className="heading">Join Video Chat</h6>
+                        </div>
+                        <div className="joinInnerContainer">
+                            <div>
+                                <input value={name} placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+                            </div>
+                            <div>
+                                <input value={idToCall} placeholder="ID to Call" className="joinInput" type="text" onChange={onClickIdToCall} />
+                            </div>
+                        </div>
+                        <div className="joinInnerContainer">
+                            <div>
+                                <CopyToClipboard text={me}>
+                                    <Button styles={{ borderRadius: '20px' }} halfWidth variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
+                                        Copy your ID
                                     </Button>
-                                </Link>
-                            ) : (
-                                <Link>
-                                    <Button
-                                        variant="contained"
-                                        color="secondary"
-                                        startIcon={<Phone fontSize="large" />}
-                                        fullWidth
-                                        onClick={() => callUser(idToCall)}
-                                    // className={classes.margin}
-                                    >
-                                        Call
-                                    </Button>
-                                </Link>
-
-                            )}
-                        </Grid>
-                    </Grid>
+                                </CopyToClipboard>
+                            </div>
+                            <div>
+                                {callAccepted && !callEnded ? (
+                                    <Link >
+                                        <Button
+                                            variant="contained"
+                                            color="secondary"
+                                            startIcon={<PhoneDisabled fontSize="large" />}
+                                            halfWidth
+                                            onClick={leaveCall}
+                                        >
+                                            Hang Up
+                                        </Button>
+                                    </Link>
+                                ) : (
+                                    <Link>
+                                        <Button
+                                            variant="contained"
+                                            color="secondary"
+                                            startIcon={<Phone fontSize="large" />}
+                                            fullWidth
+                                            onClick={() => callUser(idToCall)}
+                                        >
+                                            Call
+                                        </Button>
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </form>
                 {children}
             </Paper>
-
         </Container >
     )
 }

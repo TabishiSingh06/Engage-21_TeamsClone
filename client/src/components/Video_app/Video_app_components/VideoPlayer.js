@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
-import { Grid, Typography, Paper, Button } from '@material-ui/core';
+import { Grid, Typography, Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { SocketContext } from '../../../SocketContext';
-import { Translate } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     video: {
@@ -32,7 +31,7 @@ function VideoPlayer() {
         <Grid container className={classes.gridContainer}>
             {/*My Own Video*/}
             {stream && (
-                <Paper elevation={5} className={classes.paper}>
+                <Paper elevation={2} className={classes.paper}>
                     <Typography gutterBottom variant="h8" >{name || 'Name'}</Typography>
                     <Grid item xs={12} md={6}>
                         <video playsInline muted ref={myVideo} autoPlay className={classes.video} />

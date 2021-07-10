@@ -1,15 +1,18 @@
 const users = [];
 
-const addUser = ({ id, name1, room }) => {
-    // name1 = name1.trim().toLowerCase();
-    // room = room.trim().toLowerCase();
+const addUser = ({ id, name, room }) => {
+    // let name1;
+    // let room;
+    // (name ? name1 = name.trim().toLowerCase() : null)
+    //     (room1 ? room = room1.trim().toLowerCase() : null)
+    console.log(name);
 
-    const existingUser = users.find((user) => user.room === room && user.name1 === name1);
+    const existingUser = users.find((user) => user.room === room && user.name === name);
 
-    if (!name1 || !room) return { error: 'Username and room are required.' };
+    if (!name || !room) return { error: 'Add username and room to chat 😊.' };
     if (existingUser) return { error: 'Username is taken.' };
 
-    const user = { id, name1, room };
+    const user = { id, name, room };
 
     users.push(user);
 

@@ -1,30 +1,45 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import './Join.css';
+import { Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import './JoinRoom.css';
+
+const useStyles = makeStyles(() => ({
+    paper: {
+        paddingRight: '10px',
+        margin: '10px',
+        width: '470px',
+        padding: '10px',
+    },
+}));
 
 function JoinRoom() {
-    const [name1, setName1] = useState('');
+    const [name, setName] = useState('');
     const [room, setRoom] = useState('');
-    return (
-        <div className="joinOuterContainer">
-            <div>
-                <h4 className="heading">Join Chat</h4>
-            </div>
-            <div className="joinInnerContainer">
-                <div>
-                    <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName1(event.target.value)} />
-                </div>
-                <div>
-                    <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
-                </div>
+    const classes = useStyles();
 
+    return (
+        <Paper elevation={2} className={classes.paper}>
+            <div className="joinOuterContainer">
+                <div>
+                    <h6 className="heading">Join Chat</h6>
+                </div>
+                <div className="joinInnerContainer">
+                    <div>
+                        <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+                    </div>
+                    <div>
+                        <input placeholder="Room" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} />
+                    </div>
+
+                </div>
+                <div>
+                    <Link onClick={e => (!name || !room ) ? e.preventDefault() : null} to={`/videoapp?name=${name}&room=${room}`}>
+                        <button className="button" type="submit">Chat now!</button>
+                    </Link>
+                </div>
             </div>
-            <div>
-                <Link onClick={e => (!name1) ? e.preventDefault() : null} to={`/chat?name1=${name1}&room=${room}`}>
-                    <button className={'button mt-20'} type="submit">Chat now!</button>
-                </Link>
-            </div>
-        </div>
+        </Paper>
     );
 }
 

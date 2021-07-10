@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import './VideoApp.css';
 import { makeStyles } from '@material-ui/core/styles';
 import VideoPlayer from './Video_app_components/VideoPlayer';
@@ -38,8 +38,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function VideoApp() {
+function VideoApp({ location, user }) {
     const classes = useStyles();
+    useEffect(() => {
+        console.log(location)
+    }, [location.search]);
 
     return (
         <div>
@@ -54,7 +57,7 @@ function VideoApp() {
                     <JoinRoom />
                 </div>
                 <div className={classes.wrapper_two}>
-                    
+                    <Chat location={location} />
                 </div>
             </div>
 

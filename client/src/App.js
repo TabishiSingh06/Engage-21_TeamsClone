@@ -28,7 +28,7 @@ const App = () => {
         <Alert />
         {/* <Header /> */}
         <Switch>
-          <Route exact path="/chat" component={Chat}></Route>
+          {/* <Route exact path="/chat" component={Chat}></Route> */}
           <Route exact path="/"> <HomePage /> </Route>
           <Route exact path="/login"> <FormLogin /> </Route>
           <PrivateRoute exact path="/videoapp/" component={VideoApp} />

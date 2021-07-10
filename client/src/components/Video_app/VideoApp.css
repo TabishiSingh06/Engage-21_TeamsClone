@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 body {
-  background: #ffffff;
+  background: white;
   font-family: "Poppins", sans-serif;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 * {

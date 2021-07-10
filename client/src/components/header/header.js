@@ -21,11 +21,11 @@ const Header = ({ logout }) => {
             </div>
 
             {token === '' && profile === '' ?
-                <Button component={Link} to="/login" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="secondary">
+                <Button component={Link} to="/login" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="primary">
                     Login
                 </Button>
                 :
-                <Button onClick={logout} component={Link} to="/" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="secondary">
+                <Button onClick={logout} component={Link} to="/" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="primary">
                     Logout
                 </Button>
             }
