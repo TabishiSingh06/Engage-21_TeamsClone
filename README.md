@@ -25,16 +25,18 @@ This project is a part of the 'Build Phase' of the flagship Microsoft Engage Men
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#front-end">Front-End</a></li>
-        <li><a href="#back-end">Back-End</a></li>
+        <li><a href="#project overview">Project Overview</a></li>
+        <li><a href="#front-end">Front-End Technologies</a></li>
+        <li><a href="#back-end">Back-End Technologies</a></li>
+        <li><a href="#database">Database</a></li>
       </ul>
     </li>    
      <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#functional-features">Functional Features</a>
+    </li>
+    <li>
+             <a href="#references">References</a>
+
     </li>
   </ol>
 </details>
@@ -44,12 +46,57 @@ This project is a part of the 'Build Phase' of the flagship Microsoft Engage Men
 
 💻 A MERN Stack Video and Chat Application made using React hooks, Redux, WebRTC, Socket.io & JWT authentication along with Google OAuth. 
 
+### Project Overview
 Landing Page 
 
-![image](https://user-images.githubusercontent.com/69653249/125110509-45abc000-e102-11eb-8949-071a176d0d62.png)
+![image](https://user-images.githubusercontent.com/69653249/125208848-a2e67380-e2b2-11eb-92e4-5e000eeb3f38.png)
 
 Sign in Page
-![image](https://user-images.githubusercontent.com/69653249/125111600-ba332e80-e103-11eb-8942-ae6fd419ee7d.png)
+
+![image](https://user-images.githubusercontent.com/69653249/125208856-ae399f00-e2b2-11eb-94c4-68e43a7e55c0.png)
+
+Sign up Page
+
+![image](https://user-images.githubusercontent.com/69653249/125208863-bb568e00-e2b2-11eb-92c6-a59bcec9f7d5.png)
+
+Video App and Chat App Page 
+
+![image](https://user-images.githubusercontent.com/69653249/125208897-e6d97880-e2b2-11eb-9539-bededec4f4cb.png)
+![image](https://user-images.githubusercontent.com/69653249/125208913-083a6480-e2b3-11eb-952b-f986a675f175.png)
+
+## Front end
+
+### Technologies Used
+
+#### Reactjs <br>
+#### Axios : To send asynchronous HTTP requests to REST endpoints <br>
+#### Simple-peer : WebRTC video, voice, and data channels <br>
+#### React router dom <br> 
+#### Shortid : To create a UUID <br>
+#### Socket.io-client : To enable real-time bidirectional event-based communication. <br>
+
+## Back end
+
+### Technologies Used
+
+#### NodeJs
+#### ExpressJs
+#### Socket.io
+
+## Database 
+#### MongoDB
+
+## Functional Features
+
+#### 1. Two people video conferencing
+#### 2. Video on/off Button
+#### 3. Audio on/off Button
+#### 4. Call decline and Accept button
+#### 5. Chat Functionality with rooms
+#### 6. Authentication using JWT
+#### 7. Google OAuth - login & signup
+#### 8. Dynamic Error Handling at login and signup
+
 
 
 
