@@ -1,9 +1,16 @@
 
 # Microsoft Teams Clone
 
-This project is a part of the 'Build Phase' of the flagship Microsoft Engage Mentorship Programme 2021. 
-
+> This project is a part of the 'Build Phase' of the flagship Microsoft Engage Mentorship Programme 2021. <br>
 >Full stack MERN Web App with React hooks, Redux, WebRTC, Socket.io & JWT authentication along with Google OAuth.
+
+
+This is Tabishi Singh and here I am presenting my project that I built under the "Microsoft Engage Mentorship Programme 2021".
+I have successfully built the basic functionality, surprise feature and  additional functionalities that have been documented below. <br>
+
+I have used the agile methodology and have worked in sprints of 1 week. I've worked on one or two features per Sprint and then got them reviewed in the 1 on 1 meetings with the mentors.
+
+
 
 
 </details>
@@ -23,20 +30,19 @@ This project is a part of the 'Build Phase' of the flagship Microsoft Engage Men
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About The Project 💻</a>
       <ul>
-        <li><a href="#project overview">Project Overview</a></li>
-        <li><a href="#front-end">Front-End Technologies</a></li>
-        <li><a href="#back-end">Back-End Technologies</a></li>
+        <li><a href="#project-overview">Project Overview </a></li>
+        <li><a href="#front-end-technologies">Front End Technologies</a></li>
+        <li><a href="#back-end-technologies">Back End Technologies</a></li>
         <li><a href="#database">Database</a></li>
       </ul>
     </li>    
      <li>
-      <a href="#functional-features">Functional Features</a>
+      <a href="#functional-features">Functional Features 👩🏾‍💻</a>
     </li>
     <li>
-             <a href="#references">References</a>
-
+      <a href="#references">References 📎</a>
     </li>
   </ol>
 </details>
@@ -97,6 +103,11 @@ Video App and Chat App Page
 #### 7. Google OAuth - login & signup
 #### 8. Dynamic Error Handling at login and signup
 
+## References
+
+#### JavaScript Mastery  :  https://github.com/adrianhajdin
+#### True Coder  :  https://github.com/sefyudem
+#### DevEd  :  https://github.com/developedbyed
 
 
 
