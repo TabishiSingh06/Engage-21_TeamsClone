@@ -7,15 +7,11 @@
   height: 100vh;
 }
 
-.separator {
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border-radius: 0px;
+.separator {  
   display: inline-block;
   padding-top: 2.8vh;
-  background-image: linear-gradient(to right, #f51e6a, #ff4b2b);
   height: 7vh;
+  background-color: #ff4b6b;
   text-align: center;
   font-size: 1.4rem;
   font-family: "Noto Sans JP", sans-serif;

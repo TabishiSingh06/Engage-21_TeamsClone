@@ -57,7 +57,7 @@ function VideoApp({ location, user }) {
                     <JoinRoom />
                 </div>
                 <div className={classes.wrapper_two}>
-                    <Chat location={location} />
+                    {location.search != null ? <Chat location={location} /> : null}
                 </div>
             </div>
 

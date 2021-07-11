@@ -32,7 +32,7 @@ function VideoPlayer() {
             {/*My Own Video*/}
             {stream && (
                 <Paper elevation={2} className={classes.paper}>
-                    <Typography gutterBottom variant="h8" >{name || 'Name'}</Typography>
+                    <Typography gutterBottom variant="h8" >{name || ''}</Typography>
                     <Grid item xs={12} md={6}>
                         <video playsInline muted ref={myVideo} autoPlay className={classes.video} />
                     </Grid>
