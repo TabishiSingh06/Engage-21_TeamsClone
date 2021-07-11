@@ -69,9 +69,7 @@ Video App and Chat App Page
 ![image](https://user-images.githubusercontent.com/69653249/125208897-e6d97880-e2b2-11eb-9539-bededec4f4cb.png)
 ![image](https://user-images.githubusercontent.com/69653249/125208913-083a6480-e2b3-11eb-952b-f986a675f175.png)
 
-## Front end
-
-### Technologies Used
+## Front end Technologies
 
 #### Reactjs <br>
 #### Axios : To send asynchronous HTTP requests to REST endpoints <br>
@@ -80,9 +78,7 @@ Video App and Chat App Page
 #### Shortid : To create a UUID <br>
 #### Socket.io-client : To enable real-time bidirectional event-based communication. <br>
 
-## Back end
-
-### Technologies Used
+## Back end Technologies
 
 #### NodeJs
 #### ExpressJs
