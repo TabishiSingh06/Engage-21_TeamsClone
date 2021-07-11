@@ -38,7 +38,7 @@ Video Link of the Project : https://drive.google.com/file/d/1nO7LkAs33TbhIcanOUy
         <li><a href="#front-end-technologies">Front End Technologies</a></li>
         <li><a href="#back-end-technologies">Back End Technologies</a></li>
         <li><a href="#database">Database</a></li>
-        <li><a href="#structure">Structure</a></li>
+        <li><a href="#structure">Structure ✨</a></li>
       </ul>
     </li>    
      <li>
