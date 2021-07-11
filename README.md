@@ -36,6 +36,7 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
         <li><a href="#front-end-technologies">Front End Technologies</a></li>
         <li><a href="#back-end-technologies">Back End Technologies</a></li>
         <li><a href="#database">Database</a></li>
+        <li><a href="#structure">Structure</a></li>
       </ul>
     </li>    
      <li>
@@ -43,6 +44,9 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
     </li>
     <li>
       <a href="#references">References 📎</a>
+    </li>
+    <li>
+      <a href="#installation">Installation </a>
     </li>
   </ol>
 </details>
@@ -87,6 +91,33 @@ Video App and Chat App Page
 ## Database 
 #### MongoDB
 
+## Structure
+
+```
+|-- middlewares
+|-- models 
+|-- routes
+|-- passport-setup
+`-- client
+    `-- src 
+        |-- components
+        |   `-- chat 
+        |   `-- header
+        |   `-- HomePage
+        |   `-- Login_Signup
+        |   `-- Video_app
+        |   `-- alert.js   
+        |-- images
+        |-- reducers
+        |-- routes
+        |-- utils
+        |-- app.css
+        |-- app.js
+        |-- index.css
+        |-- index.js
+        
+```
+
 ## Functional Features
 
 #### 1. Two people video conferencing
@@ -98,11 +129,15 @@ Video App and Chat App Page
 #### 7. Google OAuth - login & signup
 #### 8. Dynamic Error Handling at login and signup
 
+## Installation
+
+```
+$ npm install
+```
+
 ## References
 
 #### JavaScript Mastery  :  https://github.com/adrianhajdin
 #### True Coder  :  https://github.com/sefyudem
 #### DevEd  :  https://github.com/developedbyed
-
-
 
