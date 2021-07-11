@@ -30,7 +30,7 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project 💻</a>
+      <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#project-overview">Project Overview </a></li>
         <li><a href="#front-end-technologies">Front End Technologies</a></li>
@@ -49,7 +49,6 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
 💻 A MERN Stack Video and Chat Application made using React hooks, Redux, WebRTC, Socket.io & JWT authentication along with Google OAuth. 
 
 ### Project Overview
