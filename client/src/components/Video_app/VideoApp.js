@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 function VideoApp({ location, user }) {
     const classes = useStyles();
-    useEffect(() => {
+    useEffect(( location ) => {
         console.log(location)
     }, [location.search]);
 

@@ -1,8 +1,6 @@
 import React, { createContext, useState, useRef, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
-import queryString from 'query-string';
-
 const SocketContext = createContext();
 const socket = io('http://localhost:5000');
 
@@ -13,8 +11,6 @@ const ContextProvider = ({ children }) => {
     const [name, setName] = useState('');
     const [call, setCall] = useState({});
     const [me, setMe] = useState('');
-    const [mic, setMic] = useState('');
-
     //reference out video
     const myVideo = useRef();
     //reference to other user video
@@ -27,7 +23,6 @@ const ContextProvider = ({ children }) => {
             try {
                 //allow for video stream or not
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-                console.log(mic);
                 console.log(stream);
                 setStream(stream);
                 myVideo.current.srcObject = stream;
@@ -60,6 +55,7 @@ const ContextProvider = ({ children }) => {
     };
 
     const declineCall = () => {
+        //METHOD TO DECLINE THE CALL AND CLEAR THE CONNECTION
         setCallAccepted(false);
         connectionRef.current.destroy();
         window.location.reload();
@@ -85,6 +81,7 @@ const ContextProvider = ({ children }) => {
     };
 
     const leaveCall = () => {
+        //METHOD TO LEAVE THE CALL
         setCallEnded(true);
         connectionRef.current.destroy();
         window.location.reload();
@@ -104,7 +101,6 @@ const ContextProvider = ({ children }) => {
             callUser,
             leaveCall,
             answerCall,
-            mic,
             declineCall,
         }}
         >

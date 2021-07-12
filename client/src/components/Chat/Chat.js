@@ -3,11 +3,10 @@ import queryString from 'query-string';
 import io from "socket.io-client";
 import InfoBar from './InfoBar';
 import Input from './Input';
-import TextContainer from './TextContainer';
 import Messages from './MessagesComponents/Messages';
-
-
 import './Chat.css';
+
+//CHAT FUNCTIONALITY 
 
 const ENDPOINT = 'http://localhost:5000';
 
@@ -19,9 +18,13 @@ const Chat = ({ location }) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+
+
     useEffect(() => {
         console.log(location)
     }, [location.search]);
+
+
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
         console.log(location);

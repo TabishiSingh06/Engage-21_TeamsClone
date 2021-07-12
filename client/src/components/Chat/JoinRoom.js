@@ -17,7 +17,7 @@ function JoinRoom() {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
     const classes = useStyles();
-
+    // Join Room Options panel
     return (
         <Paper elevation={2} className={classes.paper}>
             <div className="joinOuterContainer">

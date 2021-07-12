@@ -1,9 +1,6 @@
 import './HomePage.css';
 import body_vector from '../../images/body_vector.png';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import Header from '../header/header'
-
 
 const HomePage = () => {
 
@@ -17,7 +14,7 @@ const HomePage = () => {
                 <div className="leftBody"> <h2> Teams Clone </h2>
                     <p>Get in touch with </p>
                     <p>your friends and family!</p>
-                    <a href="http://google.com">This is the video link for the project</a>
+                    <a href="https://drive.google.com/file/d/1nO7LkAs33TbhIcanOUy7enVcfGO7bYtd/view?usp=sharing">This is the video link for the project</a>
                 </div>
                 <div className="rightBody">
                     <img src={body_vector} alt="video_call_people" />

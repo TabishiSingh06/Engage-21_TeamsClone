@@ -14,9 +14,6 @@ import Icon from './icon';
 import './FormLogin.css';
 import left from '../../images/left.png';
 import right from '../../images/right.png';
-import {
-    AUTH,
-} from '../../actions/types';
 
 const iconStyle = {
     height: "1.5rem",
@@ -25,7 +22,6 @@ const iconStyle = {
     alignSelf: "center",
     marginLeft: "12px",
 }
-
 
 const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
     const [isSignup, setisSignup] = useState(false);
@@ -103,6 +99,7 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
         <div className={isSwitchon ? "container sign-up-mode" : "container"}>
             <div className="forms-container">
                 <div className={isSwitchon ? "signin-signup sign-up-mode" : "signin-signup"}>
+                    {/* Email Password Login */}
                     <form onSubmit={e => onSubmitLogin(e)} className="sign-in-form">
                         <h2 className="title"> Sign In</h2>
                         <div className="input-field">
@@ -122,6 +119,8 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
                         </div>
                         <input type="submit" value="Login" class="btn solid" />
                         <p style={{ paddingBottom: '10px' }}> or</p>
+
+                        {/* GOOGLE OAUTH */}
                         <GoogleLogin
                             clientId="746042491743-i29monjn549pniccel0pffrr62gsl3ug.apps.googleusercontent.com"
                             render={(renderProps) => (
@@ -146,6 +145,7 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
                         />
 
                     </form>
+                    {/* Email password Signup */}
                     <form onSubmit={e => onSubmitRegister(e)} className="sign-up-form">
                         <h2 className="title"> Sign Up</h2>
                         <div className="input-field">
@@ -169,6 +169,9 @@ const FormLogin = ({ setAlert, register, login, isAuthenticated }) => {
                         </div>
                         <input type="submit" value="Sign Up" class="btn solid" />
                         <p style={{ paddingBottom: '10px' }}> or</p>
+                        
+                        {/* Google OAuth SignUP */}
+
                         <GoogleLogin
                             clientId="746042491743-i29monjn549pniccel0pffrr62gsl3ug.apps.googleusercontent.com"
                             render={(renderProps) => (

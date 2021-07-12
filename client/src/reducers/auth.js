@@ -51,17 +51,11 @@ export default function (state = initialState, action) {
         case LOGIN_FAIL:
         case LOGOUT:
         case AUTHLOGOUT:
-            // localStorage.removeItem(token);
             return {}
-        // ...state,
-        // token: null,
-        // isAuthenticated: false,
-        // loading: false
-        //}
+      
         default:
             return state;
 
     }
 }
 
-//   export default authReducer;

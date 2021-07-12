@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './header.css';
 import teamsLogo from '../../images/microsoft-teams-1.png';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout, logoutAuth } from '../../actions/auth';
+import { logout } from '../../actions/auth';
 
 
 const Header = ({ logout }) => {
@@ -19,7 +19,7 @@ const Header = ({ logout }) => {
                 <img link="" src={teamsLogo} alt="teams_logo" />
                 <span className="logo-text"> Microsoft <span style={{ color: 'black', fontWeight: '500' }}> Teams Clone </span> </span>
             </div>
-
+            {/* If no token/profile present then show login button else show logout button */}
             {token === '' && profile === '' ?
                 <Button component={Link} to="/login" style={{ textTransform: 'none', fontSize: '1rem', fontWeight: '600', marginTop: '5px', marginBottom: '7px' }} size="large" variant="contained" color="primary">
                     Login
@@ -29,7 +29,6 @@ const Header = ({ logout }) => {
                     Logout
                 </Button>
             }
-
 
         </div >
     )

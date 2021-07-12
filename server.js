@@ -6,7 +6,6 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./userChat');
 
 
 const server = require('http').createServer(app)
-
 const io = require('socket.io')(server, {
     cors: {
         origin: '*',
@@ -23,9 +22,7 @@ connectDB();
 //Init middleware
 
 app.use(express.json({ extended: false }));
-
 app.get('/', (req, res) => res.send('API/Server Running'));
-
 
 io.on('connection', (socket) => {
     socket.on('join', ({ name, room }, callback) => {
