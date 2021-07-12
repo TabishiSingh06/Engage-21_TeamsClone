@@ -10,6 +10,8 @@ I have successfully built the basic functionality, surprise feature and  additio
 
 I have used the agile methodology and have worked in sprints of 1 week. I've worked on one or two features per Sprint and then got them reviewed in the 1 on 1 meetings with the mentors.
 
+Video Link of the Project : https://drive.google.com/file/d/1nO7LkAs33TbhIcanOUy7enVcfGO7bYtd/view?usp=sharing
+
 
 
 
@@ -36,7 +38,7 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
         <li><a href="#front-end-technologies">Front End Technologies</a></li>
         <li><a href="#back-end-technologies">Back End Technologies</a></li>
         <li><a href="#database">Database</a></li>
-        <li><a href="#structure">Structure</a></li>
+        <li><a href="#structure">Structure ✨</a></li>
       </ul>
     </li>    
      <li>
