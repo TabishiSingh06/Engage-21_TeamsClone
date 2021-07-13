@@ -122,14 +122,14 @@ Video App functionality using WebRTC, Socket.io using UUID for each chat room.
 
 ## Functional Features
 
-### 1. Two people video conferencing
-### 2. Video on/off Button
-### 3. Audio on/off Button
-### 4. Call decline and Accept button
-### 5. Chat Functionality with rooms
-### 6. Authentication using JWT
-### 7. Google OAuth - login & signup
-### 8. Dynamic Error Handling at login and signup
+ 1. Two people video conferencing
+ 2. Video on/off Button
+ 3. Audio on/off Button
+ 4. Call decline and Accept button
+ 5. Chat Functionality with rooms
+ 6. Authentication using JWT
+ 7. Google OAuth - login & signup
+ 8. Dynamic Error Handling at login and signup
 
 ## Installation
 
