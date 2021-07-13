@@ -137,6 +137,10 @@ Video App and Chat App Page
 ```
 $ npm install
 ```
+To run the server (PORT: 5000) and react script (PORT: 3000) concurrently
+```
+$ npm run dev
+```
 
 ## References
 
