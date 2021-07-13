@@ -61,7 +61,7 @@ Video Link of the Project : https://youtu.be/_2-Nkws7BiE
 ### Project Overview
 Landing Page 
 
-![image](https://user-images.githubusercontent.com/69653249/125208848-a2e67380-e2b2-11eb-92e4-5e000eeb3f38.png)
+![image](https://user-images.githubusercontent.com/69653249/125410961-108dbf00-e3db-11eb-94ee-5e7bef3fb6e2.png)
 
 Sign in Page
 
