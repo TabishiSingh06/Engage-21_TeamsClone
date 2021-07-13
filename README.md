@@ -4,9 +4,8 @@
 > This project is a part of the 'Build Phase' of the flagship Microsoft Engage Mentorship Programme 2021. <br>
 >Full stack MERN Web App with React hooks, Redux, WebRTC, Socket.io & JWT authentication along with Google OAuth.
 
-
-This is Tabishi Singh and this is my project that I built under the "Microsoft Engage Mentorship Programme 2021".
-I have successfully built the basic functionality, surprise feature and  additional functionalities that have been documented below. <br>
+This is a project that I built under the "Microsoft Engage Mentorship Programme 2021".
+I have successfully built the basic functionality, surprise feature (chat functionality) and  additional functionalities that have been documented below. <br>
 
 I have used the agile methodology and have worked in sprints of 1 week. I've worked on one or two features per Sprint and then got them reviewed in the 1 on 1 meetings with the mentors.
 
@@ -123,14 +122,14 @@ Video App functionality using WebRTC, Socket.io using UUID for each chat room.
 
 ## Functional Features
 
-#### 1. Two people video conferencing
-#### 2. Video on/off Button
-#### 3. Audio on/off Button
-#### 4. Call decline and Accept button
-#### 5. Chat Functionality with rooms
-#### 6. Authentication using JWT
-#### 7. Google OAuth - login & signup
-#### 8. Dynamic Error Handling at login and signup
+### 1. Two people video conferencing
+### 2. Video on/off Button
+### 3. Audio on/off Button
+### 4. Call decline and Accept button
+### 5. Chat Functionality with rooms
+### 6. Authentication using JWT
+### 7. Google OAuth - login & signup
+### 8. Dynamic Error Handling at login and signup
 
 ## Installation
 
