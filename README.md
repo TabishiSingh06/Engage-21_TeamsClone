@@ -10,11 +10,6 @@ I have successfully built the basic functionality, surprise feature and  additio
 
 I have used the agile methodology and have worked in sprints of 1 week. I've worked on one or two features per Sprint and then got them reviewed in the 1 on 1 meetings with the mentors.
 
-Video Link of the Project : https://youtu.be/_2-Nkws7BiE
-
-
-
-
 </details>
 
 <!-- PROJECT LOGO -->
