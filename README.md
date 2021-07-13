@@ -14,7 +14,7 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a >
     <img src="./client/src/images/microsoft-teams-1.png" alt="Logo" width="80" height="80">
   </a>
 
