@@ -5,7 +5,7 @@
 >Full stack MERN Web App with React hooks, Redux, WebRTC, Socket.io & JWT authentication along with Google OAuth.
 
 
-This is Tabishi Singh and here I am presenting my project that I built under the "Microsoft Engage Mentorship Programme 2021".
+This is Tabishi Singh and this is my project that I built under the "Microsoft Engage Mentorship Programme 2021".
 I have successfully built the basic functionality, surprise feature and  additional functionalities that have been documented below. <br>
 
 I have used the agile methodology and have worked in sprints of 1 week. I've worked on one or two features per Sprint and then got them reviewed in the 1 on 1 meetings with the mentors.
