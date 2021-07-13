@@ -56,18 +56,23 @@ I have used the agile methodology and have worked in sprints of 1 week. I've wor
 ### Project Overview
 Landing Page 
 
-![image](https://user-images.githubusercontent.com/69653249/125410961-108dbf00-e3db-11eb-94ee-5e7bef3fb6e2.png)
+![image](https://user-images.githubusercontent.com/69653249/125422803-3c59e358-5349-4906-8096-d95cfaf26780.png)
 
 Sign in Page
+
+#### Authorisation and Login using JWT. You can also login using GoogleOAuth
 
 ![image](https://user-images.githubusercontent.com/69653249/125208856-ae399f00-e2b2-11eb-94c4-68e43a7e55c0.png)
 
 Sign up Page
 
+#### Authorisation and SignUp using JWT. You can also SignUp using GoogleOAuth
+
 ![image](https://user-images.githubusercontent.com/69653249/125208863-bb568e00-e2b2-11eb-92c6-a59bcec9f7d5.png)
 
 Video App and Chat App Page 
 
+Video App functionality using WebRTC, Socket.io using UUID for each chat room.
 ![image](https://user-images.githubusercontent.com/69653249/125208897-e6d97880-e2b2-11eb-9539-bededec4f4cb.png)
 ![image](https://user-images.githubusercontent.com/69653249/125208913-083a6480-e2b3-11eb-952b-f986a675f175.png)
 
