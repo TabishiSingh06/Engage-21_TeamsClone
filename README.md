@@ -44,12 +44,13 @@ Video Link of the Project : https://youtu.be/_2-Nkws7BiE
      <li>
       <a href="#functional-features">Functional Features 👩🏾‍💻</a>
     </li>
+     <li>
+      <a href="#installation">Installation </a>
+    </li>
     <li>
       <a href="#references">References 📎</a>
     </li>
-    <li>
-      <a href="#installation">Installation </a>
-    </li>
+   
   </ol>
 </details>
 
