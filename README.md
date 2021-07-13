@@ -77,21 +77,21 @@ Video App functionality using WebRTC, Socket.io using UUID for each chat room.
 
 ## Front end Technologies
 
-#### Reactjs <br>
-#### Axios : To send asynchronous HTTP requests to REST endpoints <br>
-#### Simple-peer : WebRTC video, voice, and data channels <br>
-#### React router dom <br> 
-#### Shortid : To create a UUID <br>
-#### Socket.io-client : To enable real-time bidirectional event-based communication. <br>
+ Reactjs <br>
+ Axios : To send asynchronous HTTP requests to REST endpoints <br>
+ Simple-peer : WebRTC video, voice, and data channels <br>
+ React router dom <br> 
+ Shortid : To create a UUID <br>
+ Socket.io-client : To enable real-time bidirectional event-based communication. <br>
 
 ## Back end Technologies
 
-#### NodeJs
-#### ExpressJs
-#### Socket.io
+NodeJs
+ExpressJs
+Socket.io
 
 ## Database 
-#### MongoDB
+MongoDB
 
 ## Structure
 
@@ -143,7 +143,7 @@ $ npm run dev
 
 ## References
 
-#### JavaScript Mastery  :  https://github.com/adrianhajdin
-#### True Coder  :  https://github.com/sefyudem
-#### DevEd  :  https://github.com/developedbyed
+ JavaScript Mastery  :  https://github.com/adrianhajdin
+ True Coder  :  https://github.com/sefyudem
+ DevEd  :  https://github.com/developedbyed
 
